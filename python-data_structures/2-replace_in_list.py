@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-def print_reversed_list_integer(my_list=[]):
-    my_list.reverse()
-    for i in my_list:
-        print("{:d}".format(i))
+def replace_in_list(my_list, idx, element):
+    if idx < 0 or (idx + 1) > len(my_list):
+        return my_list
+    else:
+        x = my_list[idx]
+        my_list.remove(x)
+        my_list.insert(idx, element)
+        return my_list
